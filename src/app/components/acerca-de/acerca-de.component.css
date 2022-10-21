@@ -1,0 +1,40 @@
+.row{
+     padding: 20px;
+ }
+ div{
+     background-color: rgb(159, 226, 222);
+     text-align: center;
+ }
+ /*Estilo de la foto de perfil*/
+ @media (min-width: 576px){
+     #fotodeperfil{
+         position: absolute;
+         width: 12%;
+         border-radius: 10%;
+         box-shadow: 3px 3px 3px grey;
+         left: 3%;
+         top:610px;
+     }
+ }
+ @media (max-width: 575px){
+     #fotodeperfil{
+         position: absolute;
+         width: 25%;
+         border-radius: 10%;
+         box-shadow: 3px 3px 3px grey;
+         left: 40%;
+         top:690px;
+     }
+ }
+ 
+ /*etiqueta nombre*/
+ #nombre{
+     font-weight: bold;
+     font-size:large;
+     margin-top: 10%;     
+ }
+
+ h1{
+    color:rgb(97, 93, 93);
+    font-family: Copperplate Gothic;
+ }

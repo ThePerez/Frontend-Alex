@@ -1,0 +1,25 @@
+.row {
+     padding: 25px
+}
+
+div {
+     background-color: rgb(159, 226, 222);
+}
+
+h1,
+h3 {
+     display: inline;
+     color: rgb(97, 93, 93);
+
+}
+
+h2{
+     text-shadow: black 0.1em 0.1em 1.5em;
+     color: rgb(97, 93, 93);
+}
+
+.row {
+     font-size: 14px;
+     display: flex;
+     box-shadow: 2px 2px 5px #999;
+}

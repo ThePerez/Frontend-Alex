@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <div class="logo">
+        <img src="https://img.freepik.com/premium-vector/ap-logo-design_614408-843.jpg?w=1060" alt="">
+    </div>
+    <div class="text-center mt-4 name">
+        Login
+    </div>
+    <form class="p-3 mt-3" #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Usuario"
+            class="form-control form-control-lg"
+            [(ngModel)]="nombreUsuario" required>
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" name="password" id="password" placeholder="Contraseña" class="form-control form-control-lg" [(ngModel)]="password" required>
+        </div>
+        <button class="btn mt-3">Ingresar</button>
+        <div class="text-center fs-6">
+            <a href="#">¿Olvidó su contraseña?</a> o <a href="#">Registrese</a>
+        </div>
+    </form>
+
+</div>

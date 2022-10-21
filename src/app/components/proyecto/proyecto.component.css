@@ -1,0 +1,33 @@
+.row {
+     padding: 20px;
+     background-color: rgb(159, 226, 222);
+}
+
+.contenedor {
+     width: auto;
+}
+
+.part1,
+.part2 {
+     display: inline-block;
+     text-align: justify;
+}
+
+.img-proyecto {
+     box-shadow: 25px 25px 30px rgb(168, 170, 170);
+}
+
+.row {
+     font-size: 14px;
+     display: flex;
+     box-shadow: 2px 2px 5px #999;
+}
+
+h2,
+h3 {
+     color: rgb(97, 93, 93);
+}
+
+h2{
+     text-shadow: black 0.1em 0.1em 1.5em
+}
