@@ -4,9 +4,9 @@
     </button>
 </div>
     
-    <div class="row">
+    <div class="row" *ngIf="persona">
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img src="../../../assets/image.jpg" class="img-fluid" id="fotodeperfil">
+        <img src="{{persona.img}}" class="img-fluid" id="fotodeperfil">
     </div>
 
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
