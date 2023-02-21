@@ -23,10 +23,12 @@ import { HysComponent } from "./components/hys/hys.component";
 import { NewSkillComponent } from "./components/hys/new-skill.component";
 import { LoginComponent } from "./components/login/login.component";
 import { LogoAPComponent } from "./components/logo-ap/logo-ap.component";
-import { ProyectoComponent } from "./components/proyecto/proyecto.component";
+import { ProyectoComponent } from "./components/proyecto/proyectos.component";
 import { interceptorProvider } from "./service/interceptor-service";
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
+import { EditProyectosComponent } from './components/proyecto/edit-proyectos.component';
+import { NewProyectosComponent } from './components/proyecto/new-proyectos.component';
 
 
 
@@ -50,7 +52,9 @@ import { environment } from '../environments/environment';
     EditeducacionComponent,
     EditSkillComponent,
     NewSkillComponent,    
-    EditAcercaDeComponent,
+    EditAcercaDeComponent, 
+    EditProyectosComponent, 
+    NewProyectosComponent,
   ],
   imports: [
     BrowserModule,

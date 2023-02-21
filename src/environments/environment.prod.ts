@@ -8,6 +8,6 @@ export const environment = {
     authDomain: 'front-alex.firebaseapp.com',
     messagingSenderId: '64254865546',
   },
- production: false,
+ production: true,
  URL: 'https://back-alex.herokuapp.com/'
 };

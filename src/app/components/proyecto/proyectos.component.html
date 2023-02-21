@@ -1,0 +1,41 @@
+<div class="row">
+
+     <h2>Proyectos Realizados</h2>
+     <div class="col-lg-2">
+         <button type="button" routerLink="/newProyecto" class="btn btn-outline-success" *ngIf="isLogged">Nuevo Proyecto</button>
+     </div>
+ 
+ 
+     <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let proyectos of proyectos">
+         <circle-progress 
+         [percent]="(proyectos.porcentaje)" 
+         [radius]="90" 
+         [imageSrc]="''" 
+         [title]="(proyectos.nombre)"
+         [titleColor]="'#212F3C'"
+         [showTitle]="true" 
+         [showImage]="false" 
+         [imageHeight]="70" 
+         [imageWidth]="70" 
+         [showUnits]="false"
+         [showSubtitle]="false" 
+         [outerStrokeWidth]="10" 
+         [innerStrokeWidth]="2" 
+         [outerStrokeColor]="'#32D2CE'"
+         [innerStrokeColor]="'#33FFF9'" 
+         [animation]="true" 
+         [animationDuration]="800">
+         </circle-progress>
+ 
+         <div>
+             <td *ngIf="isLogged">
+                 <button class="btn btn-light" routerLink="/editproyectos/{{proyectos.id}}">
+                     <i class="bi bi-pen"></i></button>
+             </td>
+             <td *ngIf="isLogged">
+                 <button class="btn btn-danger" (click)="delete(proyectos.id)">
+                     <i class="bi bi-trash3"></i>Eliminar</button>
+             </td>
+         </div>         
+     </div>
+ </div>
