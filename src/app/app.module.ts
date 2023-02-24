@@ -1,6 +1,5 @@
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
-import { provideStorage, getStorage } from "@angular/fire/storage";
 import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgCircleProgressModule } from "ng-circle-progress";
@@ -25,10 +24,11 @@ import { LoginComponent } from "./components/login/login.component";
 import { LogoAPComponent } from "./components/logo-ap/logo-ap.component";
 import { ProyectoComponent } from "./components/proyecto/proyectos.component";
 import { interceptorProvider } from "./service/interceptor-service";
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
 import { EditProyectosComponent } from './components/proyecto/edit-proyectos.component';
 import { NewProyectosComponent } from './components/proyecto/new-proyectos.component';
+import { environment } from "src/environments/environment.prod";
+import { provideFirebaseApp, initializeApp } from "@angular/fire/app";
+import { provideStorage, getStorage } from "@angular/fire/storage";
 
 
 
@@ -61,7 +61,7 @@ import { NewProyectosComponent } from './components/proyecto/new-proyectos.compo
     AppRoutingModule,
     FormsModule, 
     NgCircleProgressModule.forRoot({}),   
-    HttpClientModule, 
+    HttpClientModule,   
     provideStorage(() => getStorage()), provideFirebaseApp(() => initializeApp(environment.firebase)),
   ],
   providers: [
