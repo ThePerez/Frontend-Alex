@@ -11,7 +11,10 @@ import { ProyectosService } from 'src/app/service/proyectos.service';
 })
 export class NewProyectosComponent implements OnInit{
   nombre: string;
-  porcentaje: number;
+  descripcion: string;
+  imgService: any;
+  activatedRouter: any;
+Proyectos: any;
 
   constructor(private proyectosS: ProyectosService, private router: Router) { }
 
@@ -19,7 +22,8 @@ export class NewProyectosComponent implements OnInit{
   }
 
   onCreate(): void{
-    const proyectos = new Proyectos(this.nombre, this.porcentaje);
+    const proyectos = new Proyectos(this.nombre, this.descripcion, this.imgService);
+    this.proyectosS.img = this.imgService.url
     this.proyectosS.save(proyectos).subscribe(
       data => {
         alert("Proyecto se creó correctamente");
@@ -30,4 +34,10 @@ export class NewProyectosComponent implements OnInit{
       }
     )
   }
+  uploadImage($event: any){
+    const id = this.activatedRouter.snapshot.params['id'];
+    const name = "project-" + id;
+    this.imgService.uploadImage($event, name)
+  }
+
 }

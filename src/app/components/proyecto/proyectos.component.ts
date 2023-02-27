@@ -9,10 +9,12 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectoComponent implements OnInit {
-  proyectos: Proyectos[] = [];
-  Proyectos: any;
+  Proyectos: Proyectos = null; 
 
-  constructor(private proyectosS: ProyectosService, private tokenService: TokenService) { }
+  constructor(
+    private proyectosS: ProyectosService, 
+    private tokenService: TokenService) { }
+
   isLogged = false;
 
   ngOnInit(): void {
@@ -24,10 +26,9 @@ export class ProyectoComponent implements OnInit {
     }
   }
 
-  cargarProyectosS(): void{
-    this.proyectosS.lista().subscribe(
-      data => {
-        this.proyectos = data;
+  cargarProyectosS(){
+    this.proyectosS.detail(1).subscribe(
+      data => {this.Proyectos = data;
       }
     )
   }

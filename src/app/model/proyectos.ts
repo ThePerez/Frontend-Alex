@@ -1,10 +1,14 @@
 export class Proyectos {
      id: number;
      nombre: string;
-     porcentaje: number;
+     img: string;
+     descripcion: string;
 
-     constructor(nombre:string, porcentaje:number){
+     constructor (nombre: string, img: string, descripcion: string){
           this.nombre = nombre;
-          this.porcentaje = porcentaje;
+          this.img = img;
+          this.descripcion = descripcion;
      }
 }
+
+

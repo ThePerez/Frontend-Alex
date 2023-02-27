@@ -7,11 +7,19 @@
                      <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
                  </div>
                  <div class="form-group">
-                     <label for="porcentaje">Porcentaje</label>
-                     <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required>
+                    <label for="porcentaje">Descripción del Proyecto</label>
+                     <input type="text" class="form-control" id="descripción" name="descripcion" [(ngModel)]="Proyectos.descripcion" required>
                  </div>
+                 <div class="form-group">
+                    <label for="img">Imágen de Proyecto</label>
+                    <input type="file" class="form-control" id="img" name="img" (change)="uploadImage($event)" accept=".png, .jpeg, .jpg" required>
+               </div>
+               <div class="imagen">
+                    <img [src]="imgService.url" width="250px">
+               </div>
+               <br>
                  <button class="btn btn-primary">
-                     Agregar Nuevo Proyecto
+                     Crear nuevo Proyecto
                  </button>
              </form>
          </div>
