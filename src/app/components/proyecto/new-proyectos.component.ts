@@ -14,7 +14,6 @@ export class NewProyectosComponent implements OnInit{
   descripcion: string;
   imgService: any;
   activatedRouter: any;
-Proyectos: any;
 
   constructor(private proyectosS: ProyectosService, private router: Router) { }
 

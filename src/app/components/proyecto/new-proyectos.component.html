@@ -3,12 +3,12 @@
          <div>
              <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                  <div class="form-group">
-                     <label for="nombre">Crear Nuevo Proyecto</label>
+                     <label for="nombre">Nombre del Proyecto</label>
                      <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
                  </div>
                  <div class="form-group">
                     <label for="porcentaje">Descripción del Proyecto</label>
-                     <input type="text" class="form-control" id="descripción" name="descripcion" [(ngModel)]="Proyectos.descripcion" required>
+                     <input type="text" class="form-control" id="descripción" name="descripcion" [(ngModel)]="descripcion" required>
                  </div>
                  <div class="form-group">
                     <label for="img">Imágen de Proyecto</label>
