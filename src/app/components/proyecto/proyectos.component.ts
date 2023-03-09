@@ -9,7 +9,7 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectoComponent implements OnInit {
-  Proyectos: Proyectos = null; 
+  Proyectos: Proyectos[] = []; 
 
   constructor(
     private proyectosS: ProyectosService, 
@@ -26,14 +26,15 @@ export class ProyectoComponent implements OnInit {
     }
   }
 
-  cargarProyectosS(){
-    this.proyectosS.detail(1).subscribe(
-      data => {this.Proyectos = data;
+  cargarProyectosS(): void{
+    this.proyectosS.lista().subscribe(
+      data =>{
+        this.Proyectos = data;
       }
     )
   }
 
-  delete(id: number){
+  delete(id?: number){
     if(id != undefined){
       this.proyectosS.delete(id).subscribe(
         data => {
